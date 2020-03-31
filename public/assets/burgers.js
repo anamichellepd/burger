@@ -1,6 +1,8 @@
 // Make sure we wait to attach our handlers until the DOM is fully loaded.
 $(function() {
   $(".change-devoured").on("click", function(event) {
+    console.log("I CLICKED THE BUTTON");
+
     var id = $(this).data("id");
     var newDevoured = $(this).data("newdevoured");
 
@@ -27,13 +29,12 @@ $(function() {
       burger_name: $("#ca")
         .val()
         .trim(),
-      devoured: $("[burger_name=devoured]:checked")
-        .val()
-        .trim()
+      devoured: $("[burger_name=devoured]:checked").val()
+      // .trim()
     };
 
     // Send the POST request.
-    $.ajax("/api/burgers", {
+    $.ajax("/api/burgers/", {
       type: "POST",
       data: newBurger
     }).then(function() {

@@ -1,7 +1,7 @@
 var orm = require("../config/orm.js");
 
 var burger = {
-  selectAll: function(cb) {
+  all: function(cb) {
     orm.read("burgers", function(res) {
       cb(res);
     });
