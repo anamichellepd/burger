@@ -3,9 +3,9 @@ INSERT INTO burgers
 VALUES
     ("Penny's Burger");
 INSERT INTO burgers
-    (burger_name)
+    (burger_name, devoured)
 VALUES
-    ("Double double");
+    ("Double double", TRUE);
 INSERT INTO burgers
     (burger_name)
 VALUES
